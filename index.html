@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alexanderplatz 360° Guide</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Home Screen -->
+    <div id="home-screen" class="screen">
+        <h1>Willkommen auf dem Alexanderplatz!</h1>
+        <p>Bereit für deinen virtuellen 360°-Rundgang?</p>
+        <button onclick="showInfo()">Starte den Alexanderplatz Guide</button>
+    </div>
+
+    <!-- Info Screen -->
+    <div id="info-screen" class="screen" style="display: none;">
+        <img src="Bild1.jpg" alt="Alexanderplatz" class="alexanderplatz-bild">
+        <h1>Der Alexanderplatz</h1>
+        <p>
+            Der Alexanderplatz, oft einfach „Alex“ genannt, ist einer der bekanntesten Plätze Berlins.
+            Ursprünglich als Markt im 19. Jahrhundert genutzt, wurde er später zu einem Zentrum der DDR.
+            Heute ist er ein Verkehrsknotenpunkt, Shopping-Zentrum und beliebter Treffpunkt im Herzen der Hauptstadt.
+        </p>
+        <button onclick="showMap()">Wo liegt der Alexanderplatz?</button>
+    </div>
+
+    <!-- Map Screen -->
+    <div id="map-screen" class="screen" style="display: none;">
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2429.9285425014487!2d13.411379976860438!3d52.52191853971525!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a84e1e43aab13f%3A0x42174fb3d49a8f6f!2sAlexanderplatz!5e0!3m2!1sde!2sde!4v1711812345678"
+            width="600"
+            height="450"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <button onclick="startTour()">Zum 360°-Guide</button>
+    </div>
+
+    <!-- 360° Tour -->
+    <iframe id="tourFrame" src="https://tour.panoee.net/iframe/67e85ec02878e0bfaeee8801"></iframe>
+
+    <script src="script.js"></script>
+</body>
+</html>
